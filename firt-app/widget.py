@@ -1,15 +1,12 @@
 # This Python file uses the following encoding: utf-8
 import sys
-from PySide6.QtWidgets import QApplication, QWidget
+from PySide6.QtWidgets import QApplication
 
-
-class Widget(QWidget):
-    def __init__(self, parent=None):
-        super().__init__(parent)
-
+from hello_world import MyWidget
 
 if __name__ == "__main__":
     app = QApplication([])
-    window = Widget()
+    window = MyWidget()
+    window.resize(800, 600)
     window.show()
     sys.exit(app.exec())
